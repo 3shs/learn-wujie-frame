@@ -1,9 +1,3 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-
-
-</script>
-
 <template>
 
   <h1>这是主应用</h1>
@@ -16,6 +10,11 @@ import { RouterLink, RouterView } from 'vue-router'
   <RouterView />
 
 </template>
+
+<script setup lang="ts">
+import { RouterLink, RouterView } from 'vue-router'
+
+</script>
 
 <style scoped>
 

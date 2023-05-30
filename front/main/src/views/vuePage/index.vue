@@ -4,6 +4,5 @@
   <WujieVue
     name="vue3"
     url="http://127.0.0.1:5174/">
-
   </WujieVue>
 </template>
