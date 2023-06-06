@@ -1,15 +1,19 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express')
+const router = express.Router()
+
+const pool = require('../connectMysql/index')
+
+const { successResponse } = require('./../config/response')
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+  
+})
+
 router.get('/info', function(req, res, next) {
-  res.json({
-    code: 200,
-    data: {
-      
+  pool.query('select * from users', (err, data, field) => {
+    if (!err) {
+      res.json(successResponse(data))
     }
   })
 })
