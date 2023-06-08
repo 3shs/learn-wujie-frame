@@ -7,7 +7,7 @@ const { successResponse } = require('./../config/response')
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  
+
 })
 
 router.get('/info', function(req, res, next) {
