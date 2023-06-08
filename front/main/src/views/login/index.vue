@@ -1,28 +1,25 @@
 <template>
   <div class="login-container">
-    <div class="text">
-      page
-      <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-      </ul>
-    </div>
+    321
+    <div @click="theme = 'light'">亮色</div>
+    <div @click="theme = 'dark'">深色</div>
   </div>
 </template>
 <script setup lang="ts">
+import useTheme from '@/hooks/useTheme.ts'
+
+const { theme } = useTheme()
 
 </script>
 <style lang="scss" scoped>
 .login-container {
-  width: 90px;
-  height: 90px;
-  background-color: pink;
-  .text {
-    color: rebeccapurple;
+  width: 100%;
+  height: 100%;
+  @include useTheme {
+    background-color: getVar('bgColor');
+    color: getVar('textColor');
   }
+
 }
 </style>
 
