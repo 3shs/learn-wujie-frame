@@ -1,14 +1,25 @@
 <template>
   <div class="login-container">
-    321
-    <div @click="theme = 'light'">亮色</div>
-    <div @click="theme = 'dark'">深色</div>
+    <el-switch
+      @change="changeTheme"
+      v-model="switchTheme" />
   </div>
 </template>
 <script setup lang="ts">
+import {ref} from 'vue'
 import useTheme from '@/hooks/useTheme.ts'
 
+const switchTheme = ref(false)
+
 const { theme } = useTheme()
+
+const changeTheme = (val: boolean)=> {
+  if (val) {
+    theme.value = 'dark'
+  } else {
+    theme.value = 'light'
+  }
+}
 
 </script>
 <style lang="scss" scoped>
