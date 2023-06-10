@@ -1,11 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-
-async function loadViews() {
-  const views = import.meta.glob('../views/**/index.vue')
-  console.log('views', views)
-}
-loadViews()
 const routes = [
   {
     path: '/login',
